@@ -12,18 +12,20 @@ public class Reference extends OpMode {
         double motorSpeed = 0.5;
         boolean touchSensorPressed = true;
 
-        telemetry.addData("Team Number", teamNumber);
+          telemetry.addData("Team Number", teamNumber);
             telemetry.addData("Motor Speed",motorSpeed);
             telemetry.addData("Touch Sensor", touchSensorPressed);
     }
   @Override
     public void loop()   {
         telemetry.addData("Left stick x", gamepad1.left_stick_x);
-        telemetry.addData("Right stick y", gamepad1.left_stick_y);
+        telemetry.addData("Right stick y", gamepad1.right_stick_y);
         telemetry.addData("A button", gamepad1.a);
         double speedForward = -gamepad1.left_stick_y / 2.0;
+        telemetry.addData("Right stick x", gamepad1.right_stick_x);
         telemetry.addData("Left stick y", gamepad1.left_stick_y);
         telemetry.addData("speedForward", speedForward);
+
 
 
 
